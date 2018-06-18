@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+-->
+
+    <style>
+        body {
+  padding: 30px;  
+}
+hr {
+  margin: 5px 0 5px;
+}
+input {
+  display: inline-block !important;
+  width: auto !important;
+}
+#country, #phone {
+  display: inline-block;
+  width: auto;
+}
+label[for="phone"] {
+  display: block;
+}
+    </style>
+</head>
+<body>
+   <input  id="phone1" type="text" class="form-control">
+<hr>
+    <hr>
+<div class="form-group">
+<label for="phone">Телефон: </label>
+<select id="country" class="form-control">
+  <option value="ru"><img src="">Россия +7</option>
+  <option value="ua">Украина +380</option>
+  <option value="by">Белоруссия +375</option>
+</select>
+<input id="phone" type="text" class="form-control">
+</div>
+    <script>   
+   (function($) {
+  $(function() {
+     $('.phone1').inputmask('00/00/0000');
+//     $('.hour').mask('00:00');
+  });
+})(jQuery);
+  $(function() {
+    function maskPhone() {
+      var country = $('#country option:selected').val();
+      switch (country) {
+        case "ru":
+          $("#phone").inputmask("+7(999) 999-99-99");
+          break;
+        case "ua":
+          $("#phone").inputmaskmask("+380(999) 999-99-99");
+          break;
+        case "by":
+          $("#phone").inputmaskmask("+375(999) 999-99-99");
+          break;          
+      }    
+    }
+    maskPhone();
+    $('#country').change(function() {
+      maskPhone();
+    });
+  });
+        
+    </script>
+</body>
+</html>

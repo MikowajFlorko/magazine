@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <p>Додати фото:<input type="file" id="file"></p>
+          <button type="button" id="addGoods">Додати товар</button>
+    <script>
+        $('#addGoods').click(function readFile(object){
+            var file = document.getElementById('file').files[0];
+            console.log(file);
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+                reader.onload = function(){
+                 var base64picture = reader.result;   
+                
+
+        
+            console.log(file);
+            var marka = $('#markaGoods').val();
+            var model = $('#modelGoods').val();
+            var price = $('#price').val();
+            var id = $('.category select option:selected').attr('data-id');
+                
+            
+                var goods = {                    
+                'marka': 'samsung',
+                'model': 'j7',
+                'price': 12354,
+                'categoryId': 1,        
+                'imageName': base64picture
+                    
+                }
+                
+            $.ajax({                       'url':'http://localhost:8080/admin/createGoods',
+                'type': "PUT",
+                'contentType': 'application/json',
+                'dataType': 'json',
+                'data': JSON.stringify(goods),
+                'success': function(data) {
+                    alert('Товар додано');
+
+                }
+                   })
+                   }
+            });
+                
+    </script>
+</body>
+</html>

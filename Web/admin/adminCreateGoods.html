@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<header>
+     <meta charset="utf-8">
+     <link href="style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        #markaGoods{
+            margin-top: -55px;
+            margin-left: 55px;
+        }
+        #modelGoods{
+            margin-top: -42px;
+            margin-left: 45px;
+        }
+        #price{
+            margin-top: -20px;
+            margin-left: 67px;
+            margin-bottom: 0px;
+        }
+        .category{
+            margin-top: -29px;
+            margin-left: 105px;
+            margin-bottom: 10px;
+        }
+        .marka{
+            margin-top: -29px;
+            margin-left: 104px;
+        }
+        #categoryText{
+           margin-top: -10px;
+        }
+        #file{
+            margin-top: -20px;
+            margin-left: 105px;
+            
+        }
+    </style>
+</header>
+<body>
+<div class="btn-toolbar">
+    <button class="btn"><a href="adminOrders.html">Замовлення</a></button>
+    <button class="btn"><a href="adminGoods.html">Товари</a></button>
+    <button class="btn"><a href="adminCreateGoods.html">Додати товар</a></button>    
+    <button class="btn"><a href="adminCreateCategory.html">Додати категорію</a></button>
+    <button class="btn"><a href="adminMarka.html">Додати марку</a></button>
+    <button id="btnExit"><a href="loginAdmin.html">Вийти</a></button>
+
+</div>
+<div class="well">
+        <p id="categoryText"> Категорія:
+          <div class="category"></div><br>
+          <p id="categoryText"> Марка:
+          <div class="marka"></div><br>
+          <p> Модель: <input type="text" id="modelGoods"></p><br>
+          <p> Ціна: <input type="text"  id="price"></p><br>
+          <p>Додати фото:<input type="file" id="file"></p>
+          <button type="button" id="addGoods" class="btn"><a>Додати товар</a></button>
+</div>         
+
+    <script src="JS/adminCreateGoode.js">
+      </script>
+</body>
+</html>

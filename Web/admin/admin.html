@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<header>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</header>
+<body>
+    <div class="goods-out"></div>
+    <h2>Товар:</h2>
+    <p>Імя: <input type="text" id="name"></p>
+    <p>Ціна: <input type="text" id="cost"></p>
+    <input type="hidden" id="id">
+    <button class="add-to-db">Обновити</button>
+    <button><a href="#addGoods" title="">Додати новий товар</a></button>
+   <div id="addGoods">
+    <button type="button" class="close">x</button>
+    <form>
+        <a id="textGoods">Додайте новий товар</a><br>
+        <a class="textGoods">Назва товару:<input type="text" id="addNameGoods" class="btn-add" /></a><br>
+        <a class="textGoods">Ціна:<input type="number" id="addCostGoods" class="btn-add" /></a><br>
+        <button type="submit" id="cGoods" class="btn btn-primary">Додати</button>
+    </form>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

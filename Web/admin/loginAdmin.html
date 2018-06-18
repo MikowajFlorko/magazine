@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<header>
+     <meta charset="utf-8">
+     <link href="style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</header>
+<body>
+            <input type="text" id="email" placeholder="email">
+            <input type="text" id="pass" placeholder="password">
+           <button type="button" id="loginBtn">Login</button>
+<script>
+$('#loginBtn').click(function () {
+            var email = $('#email').val();
+            var pass = $('#pass').val();
+    var category = {
+        'email': email,
+        'password': pass,
+        };
+    
+$.ajax({
+        'url': 'http://localhost:8080/login',
+        'type': "POST",
+            'contentType': 'application/json',
+            'data': JSON.stringify(category),
+            'success': function (data) {
+                    localStorage.setItem('token', data);
+                    location.href = 'adminOrders.html'
+                },
+                'error': function(e) {
+                    alert('login or password incorect');
+                }
+    })
+})
+    
+  
+
+</script>
+
+</body>
+</html>

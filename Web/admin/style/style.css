@@ -1,0 +1,7 @@
+.delete {
+    cursor: pointer;
+    height: 20px;
+    width: 75px;
+    line-height: 0px;
+    background-repeat: no-repeat;
+}

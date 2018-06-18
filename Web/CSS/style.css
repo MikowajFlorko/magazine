@@ -1,0 +1,174 @@
+header {
+    text-align: justify;
+    letter-spacing: 1px;
+    height: 70px;;
+    padding: 1em 10%;
+    background: #2c3e50;
+    color: #fff;
+}
+.navMarka{
+    margin-top: 55px;
+    margin-left: 20px;
+}
+
+header h1{
+    margin-top: -45px;
+    float: left;
+}
+header nav {
+/*    display: inline-block;*/
+    float: right;
+    margin-top: -30px;
+}
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+header h1 {
+    height: 100%;
+}
+ 
+header h1::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;  
+    height: 100%;
+}
+
+p {
+    font-family: serif;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+#content{
+    margin-left: 150px;
+}
+#nav{
+    margin-top: 10px;
+    position: absolute;
+    border: 1px solid black;
+    width: 155px;
+    height: 500px;
+}
+.navCategory {
+    width: 140px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+
+.single-goods {
+    display: block;
+    width: 500px;
+    height: 620px;
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+    text-align: center;
+}
+.single-goods:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+     transform: scale(1.2);
+    
+}
+
+.single-goods button {
+    display: block;
+    margin: 20px auto;
+}
+
+#name {
+    margin-left: 107px;
+}
+
+#surname {
+    margin-left: 67px;
+}
+
+#email {
+    margin-left: 94px;
+}
+
+hr {
+    margin: 10px 0 10px;
+}
+#image {
+    width: px;
+    height: 70px;
+}
+#cartImage {
+    width: 60px;
+    width: 85px;
+}
+
+input {
+    display: inline-block !important;
+    width: auto !important;
+    margin-left: 16px;
+}
+
+#country,
+#phone {
+    display: inline-block;
+    width: auto;
+}
+
+label[for="phone"] {
+    font-family: serif;
+    display: block;
+    margin-left: 15px;
+}
+
+.single-goods {
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+    text-align: center;
+}
+
+.single-goods button {
+    display: block;
+    margin: 20px auto;
+}
+
+#button {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 175px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #323322 inset, 0 0 0 0 #F137A6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+
+#button:hover {
+    box-shadow: 0 0 10px 0 #344534 inset, 0 0 10px 4px #356434;
+    color: #433553;
+}
+@media screen and (max-width: 820px){
+     
+    header {
+        height: auto;
+    }
+     
+    header > div,
+    header > div h1,
+    header nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+     
+}    

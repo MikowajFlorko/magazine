@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="style/style.css" rel="stylesheet">
+</header>
+
+<body>
+    <div class="btn-toolbar">
+        <button class="btn"><a href="adminOrders.html">Замовлення</a></button>
+        <button class="btn"><a href="adminGoods.html">Товари</a></button>
+        <button class="btn"><a href="adminCreateGoods.html">Додати товар</a></button>
+        <button class="btn"><a href="adminCreateCategory.html">Додати категорію</a>
+        </button>
+        <button class="btn"><a href="adminMarka.html">Додати марку</a></button>
+        <button id="btnExit"><a href="loginAdmin.html">Вийти</a></button>
+
+    </div>
+    <div class="categoryAdminGoods"></div>
+    <div class="table1"></div>
+    <div class="well">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="text-align: center">ID</th>
+                    <th style="text-align: center">Марка товару</th>
+                    <th style="text-align: center">Модель товару</th>
+                    <th style="text-align: center">Категорія</th>
+                    <th style="text-align: center">Ціна</th>
+                    <th style="text-align: center">Delete</th>
+
+                    <th style="width: 36px;"></th>
+                </tr>
+            </thead>
+            <tbody id="list">
+                <td id="id"></td>
+                <td style="text-align: center" id="markaGoods"></td>
+                <td style="text-align: center" id="modelGoods"></td>
+                <td style="text-align: center" id="category"></td>
+                <td style="text-align: center" id="price"></td>
+                <td style="text-align: center" id="Delete"></td>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="JS/adminGoods.js"></script>
+</body>
+
+</html>

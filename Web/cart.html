@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8">
+    <title>Корзина</title>
+    <link rel="icon" href="image/if_shopping_cart_44666.png" type="image/x-icon">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+
+</header>
+
+<body>
+   <header>
+    <h1>Штекер</h1>
+    <nav>    
+        <a href="index.html">Головна</a>
+    </nav>
+</header>
+    <div id="my-cart"></div>
+    <div id="email-filed">
+        <hr>
+        <p>Імя: <input type="text" id="name" class="form-control"></p>
+        <p>Прізвище: <input type="text" id="surname" class="form-control"> </p>
+        <p>Email: <input type="text" id="email" class="form-control"></p>
+        <div class="form-group">
+            <label for="phone">Телефон: </label>
+            <select id="country" class="form-control">
+    <option value="ua">Україна +380</option>
+  </select>
+            <input id="phone" type="text" class="form-control">
+        </div>
+        <p><button id="button" class="send-email">Замовити</button></p>
+        <p></p>
+    </div>
+    <footer>
+    Copyright Mikola Florko
+  </footer>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
